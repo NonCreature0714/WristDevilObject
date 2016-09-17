@@ -31,7 +31,7 @@ const unsigned long &WristDevil::getFeedbackLevel() {
 }
 
 void WristDevil::setSampleSize(const unsigned long &s) {
-    if(s == 0) {
+    if(s == 0) { //Correct for potential divide by zero error.
         std::cout << "Sample set cannot be equal to zero." << std::endl;
         std::cout << "Setting sample to 1." << std::endl;
         sample = 1;

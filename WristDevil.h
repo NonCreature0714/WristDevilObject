@@ -1,5 +1,7 @@
 //
 // Created by William Brubaker on 9/16/16.
+// Site: www.intelbeast.com
+// Twitter: @InteligentBeast
 //
 
 #ifndef WRISTDEVIL_WRISTDEVIL_H
@@ -8,6 +10,12 @@
 /*
  *
  * Designed to work with the NewPing.h library.
+ *
+ * Credit to Muis on StackOverFlow for good solution
+ * to rolling average problem. Website:
+ * http://stackoverflow.com/questions/12636613/how-to-calculate-moving-average-without-keeping-the-count-and-data-total
+ * Muis' profile:
+ * http://stackoverflow.com/users/435733/muis
  *
  */
 class WristDevil {
@@ -36,34 +44,13 @@ public:
      */
     WristDevil(const unsigned long& sampleSize);
 
-    /*
-     *
-     */
     void setDistance(const unsigned long &);
-
-    /*
-     *
-     */
     const unsigned long& getDistance();
 
-    /*
-     *
-     */
     void setFeedbackLevel(const unsigned long &);
-
-    /*
-     *
-     */
     const unsigned long & getFeedbackLevel();
 
-    /*
-     *
-     */
     void setSampleSize(const unsigned long&);
-
-    /*
-     *
-     */
     const unsigned long& getSampleSize();
 };
 
